@@ -4,32 +4,217 @@
      <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Hitlab</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
 </head>
+
 <body> 
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(
+        to bottom,
+        #5ecbff 0%,
+        #1e81b0 40%,
+        #145374 70%,
+        #0b2e4d 100%
+    );
+    color: #f4e1c1; /* warna pasir */
+}
+
+/* SECTION */
+section {
+    min-height: 100vh;
+    padding: 100px 10%;
+}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.bungkus-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;   /* ini bikin sejajar vertikal */
+    gap: 15px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f4e1c1;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.profilpict img {
+    border-radius: 10%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    margin-bottom: 20px;
+}
+
+.tagline {
+    max-width: 700px;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/* SKILLS */
+.skills-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.skill-card {
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 20px;
+    flex: 1 1 220px;
+    backdrop-filter: blur(8px);
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.15);
+}
+
+/* CONTACT FORM */
+form {
+    margin-top: 30px;
+    max-width: 600px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    background: rgba(255,255,255,0.2);
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(45deg, #f4e1c1, #ffcc88);
+    color: #0b2e4d;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
+}
+
+
+
+
+
+
+
+    
+
+</style>
     
   <header> 
-      <nav> 
-            <div class="logo"><strong>Adelheid Portfolio</strong></div>
+      <nav>
+        <div class="bungkus-navbar">
+            <div class="logo"><strong>Adelheid Portfolio</strong>
+            <img src="cats.png" alt="cats miaw" height="50" width="50" style="border-radius: 50%; object-fit: cover;"></div>
            <ul class="nav-links">
+            <li class="bebas"></li>
               <li><a href="#home">Home</a></li>
-              <li><a href="#about">Me</a></li> 
+              <li><a href="#about">Me</a></li>
               <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a>
               <li><a href="#contact">Reach Me</a></li> 
             </ul>
+            </div>
         </nav>
   </header>
 
 <main>
-    <section id="home" section class="hero">
-        <div class="hero-content">
+    <section id="home" class="hero">
+        <div class="profilpict">
             <img src="cats.png" alt="cats miaw" height="180" width="180" style="border-radius: 50%; object-fit: cover;">
-            <h1>Hi, it's Adelheid</h1>
-            <p class="tagline">WebDev newbie who comitted to learn and give his best</p>
+            <h1>Welcome to the deeporto</h1>
+            <p class="tagline">Deeporto? yes, this is a <b>deeporto</b>, the  deep of portofolio from Adelheid, a webdev newbie who comitted to learn and give his best
+                <br> in here you're gonna dive into the deep of my web and you will find about me, my skills, my projects, and how to reach me in  the atlantis.
+            </p>
         </div>
     </section>
-
-    <hr>
 
     <section id="about">
         <h2>It's Me, Adelheid.</h2>
@@ -45,39 +230,41 @@
 
     <section id="skills">
         <h2>1-10 What I'm good at</h2>
-        <table border="1" cellpadding="12" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 20px;">
-            <thead> 
-                <tr style="background-color: rgb(36, 194, 194); text-align: left;">
-                    <th>No.</th>
-                    <th>Skill Name</th>
-                    <th>How Good?</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>English</td>
-                    <td>Intermediate</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>HTML</td>
-                    <td>Basic</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>github</td>
-                    <td>Basic</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>C++</td>
-                    <td>Basic</td>
-                </tr>
+        <section id="skills">
+    <h2>1-10 What I'm good at</h2>
 
-            </tbody>
-        </table>
+        <div class="skills-container">
+            <div class="skill-card">
+              <h3>English</h3>
+              <p>Intermediate</p>
+            </div>
+
+            <div class="skill-card">
+               <h3>HTML</h3>
+               <p>Basic</p>
+            </div>
+
+            <div class="skill-card">
+               <h3>GitHub</h3>
+               <p>Basic</p>
+            </div>
+
+            <div class="skill-card">
+              <h3>C++</h3>
+               <p>Basic</p>
+            </div>
+      </div>
+  </section>
+
     </section>
+
+  <section id="projects">
+    
+
+
+
+
+  </section>
 
 <section id="contact">
     <h2>Reach Me</h2>
@@ -105,7 +292,7 @@
 
 <footer>
     <hr>
-    <p style="text-align: center; color: #10d5df;">
+    <p style="text-align: center; color: #f4f9ff;">
         &copy; 2026 Adelheid Inc. All rights reserved.
     </p>
 </footer>
