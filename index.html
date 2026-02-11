@@ -1,66 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Hitlab</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <head>
+       <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Portofolio Hitlab</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   </head>
+
+   <body> 
+        <style>
+            * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+            }
+
+          html {
+          scroll-behavior: smooth;
+         }
+
+          body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(
+            to bottom,
+            #5ecbff 0%,
+            #1e81b0 40%,
+            #145374 70%,
+            #0b2e4d 100%
+         );
+            color: #f4e1c1; 
+            }
 
 
-</head>
+         section {
+           min-height: 100vh;
+           padding: 100px 10%;
+            }
 
-<body> 
-<style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-html {
-    scroll-behavior: smooth;
-}
+         header {
+           position: relative;
+           width: 100%;
+           top: 0;
+           backdrop-filter: blur(10px);
+           background: rgba(0,0,0,0.2);
+           z-index: 1000;
+          }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(
-        to bottom,
-        #5ecbff 0%,
-        #1e81b0 40%,
-        #145374 70%,
-        #0b2e4d 100%
-    );
-    color: #f4e1c1; /* warna pasir */
-}
-
-/* SECTION */
-section {
-    min-height: 100vh;
-    padding: 100px 10%;
-}
-
-/* NAVBAR */
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    backdrop-filter: blur(10px);
-    background: rgba(0,0,0,0.2);
-    z-index: 1000;
-}
-
-.bungkus-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 10%;
-}
+         .bungkus-navbar {
+          display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 15px 10%;
+          }
 
 .logo {
     display: flex;
-    align-items: center;   /* ini bikin sejajar vertikal */
+    align-items: center;   
     gap: 15px;
 }
 
@@ -89,7 +87,7 @@ header {
     color: white;
 }
 
-/* HERO */
+
 .hero {
     display: flex;
     justify-content: center;
@@ -109,7 +107,7 @@ header {
     line-height: 1.6;
 }
 
-/* SKILLS */
+
 .skills-container {
     display: flex;
     gap: 25px;
@@ -131,7 +129,7 @@ header {
     background: rgba(255,255,255,0.15);
 }
 
-/* CONTACT FORM */
+
 form {
     margin-top: 30px;
     max-width: 600px;
@@ -171,12 +169,64 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* FOOTER */
+
 footer {
     text-align: center;
     padding: 20px;
     background: rgba(0,0,0,0.3);
 }
+
+
+
+@media (max-width: 768px) {
+
+    
+    .bungkus-navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    
+    section {
+        padding: 60px 20px;
+    }
+
+    
+    .tagline {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    
+    .gwh {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skill-card {
+        width: 100%;
+    }
+
+    
+    form {
+        width: 100%;
+    }
+
+}
+
+
+
 
 
 
@@ -230,8 +280,6 @@ footer {
 
     <section id="skills">
         <h2>1-10 What I'm good at</h2>
-        <section id="skills">
-    <h2>1-10 What I'm good at</h2>
 
         <div class="skills-container">
             <div class="skill-card">
@@ -256,7 +304,6 @@ footer {
       </div>
   </section>
 
-    </section>
 
   <section id="projects">
     
